@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+
+</head>
+<body>
+
+    <div class="container mt-8 text-center">
+        <h1 class="display-8 text-center text-primary">Contact Form</h1>
+        <span style="color: green;" id="result"></span>
+            <div class=" text-center ">
+                    <label id="error"></label>
+                        <div id="form-group">
+                            <input placeholder="FIRSTNAME" id="FName"  type="text" class="form-control" >
+                        </div>  
+                            <div id="form-group">
+                            <input placeholder="LASTNAME" id="LName"  type="text" class="form-control" >
+                            </div>  
+                        <div id="form-group">
+                            <input placeholder="PHONENUMBER" id="Phone"  type="text" class="form-control" >
+                        </div>  
+                        <input value="Add Contact" onclick="userInputValidation()" type="submit"  class="btn btn-primary btn-block mt-2">
+                        <button type="submit" onclick="window.location.reload()" class="btn btn-primary btn-block mt-2">Refresh Page</button>
+<br>
+                        <div id="form-group">
+                        <label for="inp_delete_id">Select Customer ID to Deactivate or Activate</label>
+                        <br>
+                        <span style="color: red;" id="deleteResult"></span>
+                        <span style="color: green;" id="activeResult"></span>
+                        <input class="form-control" id="inp_delete_id" type="text" /> 
+                        <button class="btn btn-primary btn-block mt-2" id="btn_deactivate" onclick="deactivate()">Deactivate Customer Record</button>
+                        <button class="btn btn-primary btn-block mt-2" id="btn_deactivate" onclick="activate()">Activate Customer Record</button>
+                        </div>
+<br>
+                       <!-- <p id="duplicateFound"></p>
+                     -->
+            </div>
+    </div>
+
+    <h1 class="display-8 text-center text-primary" >Contacts</h1>
+    <script src="ContactManagerServerScripts.js"></script>
+
+<div class="container mt-8">
+
+
+    <!-- <h1 class="display-8 text-center text-primary" >Contact Managment</h1>
+        <div class="text-center">
+            <input value="Ascending Order" type="submit" onclick="" class="btn btn-primary btn-block mt-2">
+                <label class="text-primary" >FIRSTNAME</label><input type="radio" value="FirstName" name="ascending">
+                <label class="text-primary" >LASTNAME</label><input type="radio" value="LastName" name="ascending">   
+            <input value="Descending Order" type="submit" onclick=""  class="btn btn-primary btn-block mt-2"> -->
+            <!-- <input value="Capitalize" type="submit" onclick="capitalize()"  class="btn btn-primary btn-block mt-2">
+            <input value="Duplicates" type="submit" onclick="dup()"  class="btn btn-primary btn-block mt-2" > -->
+        </div>
+
+</div>   
+
+
+</body>
+</html>
+
